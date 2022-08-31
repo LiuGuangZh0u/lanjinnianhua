@@ -16,65 +16,65 @@ int i;
 void Menu()
 {
     printf("\t\t======================================================\n");
-    printf("\t\t||                 Ñ§Éú³É¼¨¹ÜÀíÏµÍ³                 ||\n");
-    printf("\t\t||                  1.Ìí¼ÓÑ§Éú³É¼¨                  ||\n");//4
-	printf("\t\t||                  2.Êä³öÑ§Éú³É¼¨                  ||\n");
-    printf("\t\t||                  3.²éÑ¯Ñ§Éú³É¼¨                  ||\n");
-    printf("\t\t||                  4.Ñ§ÉúÊı¾İÅÅĞò                  ||\n");//°´Æ½¾ù³É¼¨ºÍ¼ÆËã»ú³É¼¨
-    printf("\t\t||                  5.ÍË³öÑ§Éú³É¼¨¹ÜÀíÏµÍ³          ||\n");
+    printf("\t\t||                 å­¦ç”Ÿæˆç»©ç®¡ç†ç³»ç»Ÿ                 ||\n");
+    printf("\t\t||                  1.æ·»åŠ å­¦ç”Ÿæˆç»©                  ||\n");//4
+	printf("\t\t||                  2.è¾“å‡ºå­¦ç”Ÿæˆç»©                  ||\n");
+    printf("\t\t||                  3.æŸ¥è¯¢å­¦ç”Ÿæˆç»©                  ||\n");
+    printf("\t\t||                  4.å­¦ç”Ÿæ•°æ®æ’åº                  ||\n");//æŒ‰å¹³å‡æˆç»©å’Œè®¡ç®—æœºæˆç»©
+    printf("\t\t||                  5.é€€å‡ºå­¦ç”Ÿæˆç»©ç®¡ç†ç³»ç»Ÿ          ||\n");
     printf("\t\t======================================================\n");
 }
 
-void Input()//1.Ìí¼ÓÑ§Éú³É¼¨
+void Input()//1.æ·»åŠ å­¦ç”Ÿæˆç»©
 {
-	printf("\t\tÇëÊäÈëÑ§Éú¸öÊı:");
+	printf("\t\tè¯·è¾“å…¥å­¦ç”Ÿä¸ªæ•°:");
 	scanf("%d",&stu_num); 
-    printf("\t\tÇë°´Ë³ĞòÊäÈëÑ§ÉúĞÕÃû£¬Ñ§ºÅ£¬Ñ§¿Æ³É¼¨£¬²»Í¬ÏîÖ®¼äÓÃTab¸ô¿ª£º\n");
-    printf("\t\tĞÕÃû	Ñ§ºÅ    Math    English		C\n");
+    printf("\t\tè¯·æŒ‰é¡ºåºè¾“å…¥å­¦ç”Ÿå§“åï¼Œå­¦å·ï¼Œå­¦ç§‘æˆç»©ï¼Œä¸åŒé¡¹ä¹‹é—´ç”¨Tabéš”å¼€ï¼š\n");
+    printf("\t\tå§“å	å­¦å·    Math    English		C\n");
     for(i=0;i<stu_num;i++)
     {
         printf("\t\t");
         scanf("%s%s%f%f%f", stu[i].Name, stu[i].ID,&stu[i].Math, &stu[i].English, &stu[i].C);
     }
-        printf("\t\tÌáÊ¾£º³É¼¨´æÈëÍê±Ï£¡\n\n");
-		printf("\t\t------Çë¼ÌĞø-------\n\n");
+        printf("\t\tæç¤ºï¼šæˆç»©å­˜å…¥å®Œæ¯•ï¼\n\n");
+		printf("\t\t------è¯·ç»§ç»­-------\n\n");
 }
 
-void Output()//2.Êä³öÈ«°àÑ§ÉúĞÅÏ¢
+void Output()//2.è¾“å‡ºå…¨ç­å­¦ç”Ÿä¿¡æ¯
 {
-    printf("\t\tĞÕÃû\tÑ§ºÅ\t\tMath\t\tEnglish\t\tC\n");
+    printf("\t\tå§“å\tå­¦å·\t\tMath\t\tEnglish\t\tC\n");
 	for (i = 0; i < stu_num; i++)
     {
         printf("\t\t%s\t%s\t %.2f\t\t  %.2f\t\t %.2f\n\n", stu[i].Name, stu[i].ID, stu[i].Math, stu[i].English, stu[i].C);
 	}
 }
 
-void Find()//3.²éÑ¯Ñ§Éú³É¼¨
+void Find()//3.æŸ¥è¯¢å­¦ç”Ÿæˆç»©
 {
     int a, i;
     float sum, ave;
     printf("\t\t======================================================\n");
-    printf("\t\t||            ¡ù»¶Ó­½øÈëÑ§ÉúĞÅÏ¢²éÑ¯ÏµÍ³¡ù          ||\n");
-	printf("\t\t||                1.°´Ñ§ÉúĞÕÃû²éÕÒ                  ||\n");
-    printf("\t\t||                2.°´Ñ§ÉúÑ§ºÅ²éÕÒ                  ||\n");
+    printf("\t\t||            â€»æ¬¢è¿è¿›å…¥å­¦ç”Ÿä¿¡æ¯æŸ¥è¯¢ç³»ç»Ÿâ€»          ||\n");
+	printf("\t\t||                1.æŒ‰å­¦ç”Ÿå§“åæŸ¥æ‰¾                  ||\n");
+    printf("\t\t||                2.æŒ‰å­¦ç”Ÿå­¦å·æŸ¥æ‰¾                  ||\n");
     printf("\t\t======================================================\n");
-    printf("\t\t>>>ÇëÑ¡Ôñ1--2£º");
+    printf("\t\t>>>è¯·é€‰æ‹©1--2ï¼š");
     scanf("%d", &a);
     switch (a)
     {
-    case 1://1.°´Ñ§ÉúµÄĞÕÃû²éÕÒ
+    case 1://1.æŒ‰å­¦ç”Ÿçš„å§“åæŸ¥æ‰¾
     {
         char Name[20];
-        printf("\t\t>>>ÇëÊäÈëÒª²éÕÒµÄÑ§ÉúµÄĞÕÃû£º");
+        printf("\t\t>>>è¯·è¾“å…¥è¦æŸ¥æ‰¾çš„å­¦ç”Ÿçš„å§“åï¼š");
         scanf("%s", Name);
-        printf("\t\t>>>ÒÔÏÂÊÇ%sÍ¬Ñ§µÄĞÅÏ¢£º\n\n",Name);
+        printf("\t\t>>>ä»¥ä¸‹æ˜¯%såŒå­¦çš„ä¿¡æ¯ï¼š\n\n",Name);
         for ( i = 0;  i< stu_num; i++)
         {
             if (strcmp(Name, stu[i].Name) == 0)
             {
                 sum = stu[i].Math + stu[i].English + stu[i].C;
                 ave = (stu[i].Math + stu[i].English + stu[i].C) / 3;
-                printf("\t\tĞÕÃû\tÑ§ºÅ\tMath\tEnglish\tC\tÆ½¾ù³É¼¨\t×Ü³É¼¨\n");
+                printf("\t\tå§“å\tå­¦å·\tMath\tEnglish\tC\tå¹³å‡æˆç»©\tæ€»æˆç»©\n");
                 printf("\t\t%s\t %s\t %.2f\t\t  %.2f\t\t %.2f\t\t%.2f\t\t%.2f\n\n", stu[i].Name, stu[i].ID, stu[i].Math, stu[i].English, stu[i].C, ave, sum);
             }
  
@@ -82,19 +82,19 @@ void Find()//3.²éÑ¯Ñ§Éú³É¼¨
                  
     }
     break;
-    case 2://2.°´Ñ§ÉúÑ§ºÅ²éÕÒ
+    case 2://2.æŒ‰å­¦ç”Ÿå­¦å·æŸ¥æ‰¾
     {
         char Num[20];
-        printf("\t\t>>>ÇëÊäÈëÒª²éÕÒµÄÑ§ÉúµÄÑ§ºÅ£º");
+        printf("\t\t>>>è¯·è¾“å…¥è¦æŸ¥æ‰¾çš„å­¦ç”Ÿçš„å­¦å·ï¼š");
         scanf("%s", Num);
-        printf("\t\t>>>ÒÔÏÂÊÇ%sºÅÍ¬Ñ§µÄĞÅÏ¢£º\n\n",Num);
+        printf("\t\t>>>ä»¥ä¸‹æ˜¯%så·åŒå­¦çš„ä¿¡æ¯ï¼š\n\n",Num);
         for ( i = 0; i < stu_num; i++)
         {
             if (0 == strcmp(Num, stu[i].ID))
             {
                 sum = stu[i].Math + stu[i].English + stu[i].C;
                 ave = (stu[i].Math + stu[i].English + stu[i].C) / 3;
-                printf("\t\tĞÕÃû\tÑ§ºÅ\tMath\tEhglish\tC\tÆ½¾ù³É¼¨\t×Ü³É¼¨\n");
+                printf("\t\tå§“å\tå­¦å·\tMath\tEhglish\tC\tå¹³å‡æˆç»©\tæ€»æˆç»©\n");
                 printf("\t\t%s\t %s\t %.2f\t\t  %.2f\t\t %.2f\t\t%.2f\t\t%.2f\n\n", stu[i].Name, stu[i].ID,  stu[i].Math, stu[i].English, stu[i].C, ave,sum);
             }
              
@@ -102,28 +102,28 @@ void Find()//3.²éÑ¯Ñ§Éú³É¼¨
     }
     break;
 	default:
-            printf("\n\t\t>>>ÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë!\n\n");
+            printf("\n\t\t>>>è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥!\n\n");
     }
 }
-void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
+void Order()//4.å­¦ç”Ÿæ•°æ®æ’åº
 {
     int a;
 	float ave,sum;
     printf("\t\t======================================================\n");
-    printf("\t\t||            ¡ù»¶Ó­½øÈëÑ§Éú³É¼¨ÅÅĞòÏµÍ³¡ù          ||\n");
-    printf("\t\t||                1.°´Ñ§Éú×Ü³É¼¨ÅÅĞò                ||\n");
-    printf("\t\t||                2.°´Ñ§ÉúC³É¼¨ÅÅĞò                 ||\n");
-	printf("\t\t||                3.°´Ñ§ÉúÊıÑ§³É¼¨ÅÅĞò              ||\n");
-	printf("\t\t||                4.°´Ñ§ÉúÓ¢Óï³É¼¨ÅÅĞò              ||\n");
-	printf("\t\t||                5.°´Ñ§ÉúÑ§ºÅÅÅĞò³É¼¨              ||\n");
+    printf("\t\t||            â€»æ¬¢è¿è¿›å…¥å­¦ç”Ÿæˆç»©æ’åºç³»ç»Ÿâ€»          ||\n");
+    printf("\t\t||                1.æŒ‰å­¦ç”Ÿæ€»æˆç»©æ’åº                ||\n");
+    printf("\t\t||                2.æŒ‰å­¦ç”ŸCæˆç»©æ’åº                 ||\n");
+	printf("\t\t||                3.æŒ‰å­¦ç”Ÿæ•°å­¦æˆç»©æ’åº              ||\n");
+	printf("\t\t||                4.æŒ‰å­¦ç”Ÿè‹±è¯­æˆç»©æ’åº              ||\n");
+	printf("\t\t||                5.æŒ‰å­¦ç”Ÿå­¦å·æ’åºæˆç»©              ||\n");
     printf("\t\t======================================================\n");
-    printf("\t\t>>>ÇëÑ¡Ôñ1--5£º");
+    printf("\t\t>>>è¯·é€‰æ‹©1--5ï¼š");
     scanf("%d", &a);
-    printf("\t\t>>>ÅÅĞòÈçÏÂ£º\n\n");
-    printf("\t\tĞÕÃû\tÑ§ºÅ\tMath\tEnglish\tC\tÆ½¾ù³É¼¨\t×Ü³É¼¨\n");
+    printf("\t\t>>>æ’åºå¦‚ä¸‹ï¼š\n\n");
+    printf("\t\tå§“å\tå­¦å·\tMath\tEnglish\tC\tå¹³å‡æˆç»©\tæ€»æˆç»©\n");
     switch (a)
     {
-    case 1://1.°´Ñ§Éú×Ü³É¼¨ÅÅĞò  ÆğÅİ·¨
+    case 1://1.æŒ‰å­¦ç”Ÿæ€»æˆç»©æ’åº  èµ·æ³¡æ³•
     {
         int m, n;
         struct student tmp;
@@ -139,7 +139,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
 				 }
 			}
 		}
-		 printf("\t\tĞÕÃû\tÑ§ºÅ\t\tMath\t\tEnglish\t\tC\n");
+		 printf("\t\tå§“å\tå­¦å·\t\tMath\t\tEnglish\t\tC\n");
 	     for ( i = 0; i < stu_num; i++)
 		 {
 			 sum = stu[i].Math + stu[i].English + stu[i].C;
@@ -150,7 +150,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
         
          
     }break;
-    case 2://2.°´Ñ§ÉúC³É¼¨ÅÅĞò
+    case 2://2.æŒ‰å­¦ç”ŸCæˆç»©æ’åº
     {
         int m, n;
         struct student tmp;
@@ -167,7 +167,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
                // printf("\t\t%s\t%s\t  %.2f\t\t  %.2f\t\t%.2f\t\t%.2f\t\t%.2f\n", stu[n].Name, stu[n].ID,  stu[n].Math, stu[n].English, stu[n].C, (stu[n].Math + stu[n].English + stu[n].C) / 3, stu[n].Math + stu[n].English + stu[n].C);
             }
         }
-         printf("\t\tĞÕÃû\tÑ§ºÅ\t\tMath\t\tEnglish\t\tC\n");
+         printf("\t\tå§“å\tå­¦å·\t\tMath\t\tEnglish\t\tC\n");
 	     for ( i = 0; i < stu_num; i++)
 		 {
 			 sum = stu[i].Math + stu[i].English + stu[i].C;
@@ -176,7 +176,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
 	        printf("\t\t%s\t%s\t  %.2f\t\t  %.2f\t\t%.2f\t\t%.2f\t\t%.2f\n", stu[i].Name, stu[i].ID,  stu[i].Math, stu[i].English, stu[n].C,ave, sum);
          }
     } break;
-	case 3://3.°´Ñ§ÉúMath³É¼¨ÅÅĞò
+	case 3://3.æŒ‰å­¦ç”ŸMathæˆç»©æ’åº
     {
         int m, n;
         struct student tmp;
@@ -193,7 +193,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
                 //printf("\t\t%s\t%s\t  %.2f\t\t  %.2f\t\t%.2f\t\t%.2f\t\t%.2f\n", stu[n].Name, stu[n].ID,  stu[n].Math, stu[n].English, stu[n].C, (stu[n].Math + stu[n].English + stu[n].C) / 3, stu[n].Math + stu[n].English + stu[n].C);
             }
         }
-		 printf("\t\tĞÕÃû\tÑ§ºÅ\t\tMath\t\tEnglish\t\tC\n");
+		 printf("\t\tå§“å\tå­¦å·\t\tMath\t\tEnglish\t\tC\n");
 	     for ( i = 0; i < stu_num; i++)
 		 {
 			 sum = stu[i].Math + stu[i].English + stu[i].C;
@@ -203,7 +203,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
          }
     }
     break;
-	case 4://4.°´Ñ§ÉúEnglish³É¼¨ÅÅĞò
+	case 4://4.æŒ‰å­¦ç”ŸEnglishæˆç»©æ’åº
     {
         int m, n;
         struct student tmp;
@@ -220,7 +220,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
                // printf("\t\t%s\t%s\t  %.2f\t\t  %.2f\t\t%.2f\t\t%.2f\t\t%.2f\n", stu[n].Name, stu[n].ID,  stu[n].Math, stu[n].English, stu[n].C, (stu[n].Math + stu[n].English + stu[n].C) / 3, stu[n].Math + stu[n].English + stu[n].C);
             }
         }
-		 printf("\t\tĞÕÃû\tÑ§ºÅ\t\tMath\t\tEnglish\t\tC\n");
+		 printf("\t\tå§“å\tå­¦å·\t\tMath\t\tEnglish\t\tC\n");
 	     for (i = 0; i < stu_num; i++)
 		 {
 			 sum = stu[i].Math + stu[i].English + stu[i].C;
@@ -230,7 +230,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
          }
     }
     break;
-    case 5://5.°´Ñ§ÉúÑ§ºÅÅÅĞò³É¼¨
+    case 5://5.æŒ‰å­¦ç”Ÿå­¦å·æ’åºæˆç»©
     {
         int m, n;
         struct student tmp;
@@ -247,7 +247,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
                // printf("\t\t%s\t%s\t  %.2f\t\t  %.2f\t\t%.2f\t\t%.2f\t\t%.2f\n", stu[n].Name, stu[n].ID,  stu[n].Math, stu[n].English, stu[n].C, (stu[n].Math + stu[n].English + stu[n].C) / 3, stu[n].Math + stu[n].English + stu[n].C);
             }
         }
-		 printf("\t\tĞÕÃû\tÑ§ºÅ\t\tMath\t\tEnglish\t\tC\n");
+		 printf("\t\tå§“å\tå­¦å·\t\tMath\t\tEnglish\t\tC\n");
 	     for ( i = 0; i < stu_num; i++)
 		 {
 			 sum = stu[i].Math + stu[i].English + stu[i].C;
@@ -258,7 +258,7 @@ void Order()//4.Ñ§ÉúÊı¾İÅÅĞò
     }
     break;
 	default:
-            printf("\n\t\t>>>ÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë!\n\n");
+            printf("\n\t\t>>>è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥!\n\n");
     }
 
 }
@@ -270,22 +270,24 @@ int main()
     while (1)
     {
         Menu();
-        printf("\t\t>>>ÇëÑ¡Ôñ1--5:");
+        printf("\t\t>>>è¯·é€‰æ‹©1--5:");
         scanf("%d", &selection);
         printf("\n");
         switch (selection)
         {
-        case 1:  Input();     break;  //1.Ìí¼ÓÑ§Éú³É¼¨
-		case 2:  Output();    break;  //2.Êä³öÈ«°àÑ§ÉúĞÅÏ¢
-        case 3:  Find();      break;  //3.²éÑ¯Ñ§Éú³É¼¨
-        case 4:  Order();     break;  //4.Ñ§ÉúÊı¾İÅÅĞò
+        case 1:  Input();     break;  //1.æ·»åŠ å­¦ç”Ÿæˆç»©
+		case 2:  Output();    break;  //2.è¾“å‡ºå…¨ç­å­¦ç”Ÿä¿¡æ¯
+        case 3:  Find();      break;  //3.æŸ¥è¯¢å­¦ç”Ÿæˆç»©
+        case 4:  Order();     break;  //4.å­¦ç”Ÿæ•°æ®æ’åº
         case 5:
-            printf("\n\t\t>>>ÄúÒÑ³É¹¦ÍË³öÑ§Éú³É¼¨¹ÜÀíÏµÍ³£¬¸ĞĞ»Ê¹ÓÃ£¡\n\n");
+            printf("\n\t\t>>>æ‚¨å·²æˆåŠŸé€€å‡ºå­¦ç”Ÿæˆç»©ç®¡ç†ç³»ç»Ÿï¼Œæ„Ÿè°¢ä½¿ç”¨ï¼\n\n");
             exit(0);
             break;
         default:
-            printf("\n\t\t>>>ÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë!\n\n");
+            printf("\n\t\t>>>è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥!\n\n");
         }
     }
     return 0;
 }
+
+
